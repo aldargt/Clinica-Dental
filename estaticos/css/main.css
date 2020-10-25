@@ -1,0 +1,38 @@
+
+*{
+	margin: 0;
+	border: 0;
+	font-family: century gothic;
+}
+body{
+ margin: 0;
+ border: 0;
+ background:url(../img/doc5.JPG);
+
+}
+h1{
+	color: #FDFEFE;
+	text-align-last: center; 
+	font-size: 100px;
+}
+
+nav{
+	background-color: #85C1E9;
+	padding: 60px;
+	text-align-last:center;
+
+
+}
+
+li{
+	
+	display: inline-block;
+	color: #FFFFFF;
+	list-style: none;
+	font-size: 25px;
+	
+}
+a{
+	text-decoration: none;
+	padding: 40px;
+}
