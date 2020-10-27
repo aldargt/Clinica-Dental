@@ -9,12 +9,16 @@
 
 	<?php 
 		include("con_db.php");
-		$query = "select id, titulo from clinicadental_tratamientos";
+		$query = "select * from clinicadental_tratamientos";
 		$resultset = pg_query($conex, $query);
 		pg_close($conex);
 
 		while($tupla = pg_fetch_assoc($resultset)){
-			echo "<div><a href='mostrar.php?id=" . $tupla["id"] . "'>" . $tupla["titulo"] . "</a></div>";
+			
+			echo "<img src='../multimedia/". $tupla["imagen"] . "'><br>";
+			echo "<h2>".$tupla["titulo"]."</h2>";
+
+			echo $tupla["descripcion"];
 		}
 	?>
 
