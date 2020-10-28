@@ -1,0 +1,12 @@
+body{
+    overflow-x: hidden;
+    background-color: darkcyan;
+}
+h1 {
+    margin: 10px;
+    text-align: center;
+    color: White;
+}
+.card-deck{
+    margin: 10px;
+}
