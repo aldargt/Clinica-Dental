@@ -6,6 +6,10 @@
 	<link rel="stylesheet" type="text/css" href="../estaticos/css/estilo.css">
 </head>
 <body>
+	<div class="nav">
+		<a href="../index.html">Inicio</a>
+		<a href="homeAdministrador.html">Administrador</a>
+	</div>
     <form method="post" enctype="multipart/form-data">
 		<h1>Registro de Tratamiento</h1>
 		<h5>Los campos marcados con * son obligatorios.</h5>
