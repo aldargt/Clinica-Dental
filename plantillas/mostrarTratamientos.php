@@ -23,7 +23,7 @@
 			}
 			?>
   	     <div class="card">
-		   <img src='../multimedia/<?php echo $tratamiento["imagen"] ?>' class="card-img-top" alt="...">
+		   <img class="zoom" src='../multimedia/<?php echo $tratamiento["imagen"] ?>' class="card-img-top" alt="...">
             <div class="card-body">
        			 <h5 class="card-title">
 						<?php echo $tratamiento["titulo"] ?>

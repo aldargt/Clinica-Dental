@@ -10,3 +10,13 @@ h1 {
 .card-deck{
     margin: 10px;
 }
+.zoom {
+    padding: 50px;
+    transition: transform .2s;
+    width: 105%;
+    margin: 0 auto;
+  }
+  
+  .zoom:hover {
+    transform: scale(1.2);
+  }
