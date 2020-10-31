@@ -21,20 +21,19 @@
 			if ($contador%2 == 1){
 				echo "<div class='card-deck'>";
 			}
-			?>
-  	     <div class="card">
-		   <img class="zoom" src='../multimedia/<?php echo $tratamiento["imagen"] ?>' class="card-img-top" alt="...">
+	?>
+  	    <div class="card">
+		   	<img onerror="this.src='../estaticos/img/default.jpg';" src='../multimedia/<?php echo $tratamiento["imagen"] ?>' class="card-img-top" alt="...">
             <div class="card-body">
-       			 <h5 class="card-title">
-						<?php echo $tratamiento["titulo"] ?>
-					</h5>
-        	      <p class="card-text">
-					  <?php echo $tratamiento["descripcion"]?>
-					</p>
+       			<h2 class="card-title">
+					<?php echo $tratamiento["titulo"] ?>
+				</h2>
+        	    <p class="card-text">
+					<?php echo nl2br($tratamiento["descripcion"]) ?>
+				</p>
             </div>
-    	 </div>
-  		
-		
+    	</div>
+  				
 	<?php
 			if($contador% 2 ==0){
 			echo "</div>";
@@ -43,6 +42,9 @@
 		}
 	?>
 	</div>
+
+<script src="../estaticos/js/bootstrap/jquery.js"></script>
+<script src="../estaticos/js/mostrarTratamientos.js"></script>
 
 </body>
 </html>

@@ -18,7 +18,9 @@ if (isset($_POST["boton1"])) {
 		$resultado   = pg_query($conex,$consulta);
 
 		$destino = "../multimedia/" . $imagen;
-		$img = move_uploaded_file( $tmp_name, $destino );
+		if(move_uploaded_file( $tmp_name, $destino )){
+			chmod('images/'.$archivo, 0777);
+		}
 
 	    if ($resultado) {
 	    	echo "<h3 class='ok'>¡Se ha Registrado correctamente el tratamiento!</h3>";
