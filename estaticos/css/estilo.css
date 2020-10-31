@@ -1,41 +1,62 @@
 * {
 	padding: 0;
 	margin: 0;
-	font-family: century gothic;
+	box-sizing: border-box;
+	font-family: 'Times New Roman', Times, serif;
 }
 body{
-	background: #74b9ff;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url(../img/clinicadental.jpg);
+	/*background: #74b9ff;*/
 }
 
 form {
-	padding: 20px 20px;
-	background: #6c5ce7;
-	margin: 20%;
-	margin-top: 1%;
-	padding-top: 28px;
-	margin-bottom: 1%;
+	/*padding: 20px 20px;*/
+	color: white;
+	position: absolute;
+	left: 50%;
+	top: 60%;
+	transform: translate(-50%, -50%);
+	padding: 20px;
+	width: 80%;
+	text-align: center !important;
+	background-color: rgba(0,0,0, 0.6)
+	
+
+	/*background: #6c5ce7;*/
+	/*margin: 20%;*/
+	/*margin-top: 1%;*/
+	/*padding-top: 28px;*/
+	/*margin-bottom: 1%;*/
 }
 
 h1 {
+	font-size: 5vw;
 	text-align: center;
 	padding: 3px;
-	color: #444
+	color: white
 }
 h5{
 	text-align: left;
 	padding: 5px;
-	color: #444
+	color: white;
+	/*color: #444*/
 }
 h3{
 	text-align: left;
 	padding: 5px;
-	color: #444
+	color: white;
+	/*color: #444*/
 }
 
 input {
 	width: calc(100% - 20px);
 	padding: 9px;
 	margin-bottom: 12px;
+	/*margin-bottom: 12px;*/
 	font-size: 16px
 }
 textarea{
@@ -47,16 +68,17 @@ textarea{
 input[type="submit"]{
 	background-color: #0abde3;
 	color: #222f3e;
-	width: 80%;
-	margin: 0% 10%;
-	margin-top: 22px;
+	width: 20%;
+	margin: 1%;
+	/*margin: 0% 10%;*/
+	/*margin-top: 22px;*/
 	border: none;
 }
 input[type="reset"]{
 	background-color: #0abde3;
 	color: #222f3e;
-	width: 80%;
-	margin: 0% 10%;
+	width: 20%;
+	margin: 1%;
 	margin-top: 22px;
 	border: none;
 }

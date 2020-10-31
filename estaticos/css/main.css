@@ -2,32 +2,42 @@
 *{
 	margin: 0;
 	border: 0;
-	font-family: century gothic;
+	font-family: 'Times New Roman', Times, serif;
 }
 body{
  margin: 0;
  border: 0;
- background:url(../img/doc5.jpg);
+ background:url(../img/admin.jpeg);
 
 }
 h1{
-	color: #FDFEFE;
+	/*font-family: 'Times New Roman', Times, serif;
+	font-size: 5vw;*/
+	color: white;
 	text-align-last: center; 
-	font-size: 100px;
+	font-size: 7vw;
 }
 
 nav{
-	background-color: #85C1E9;
+		/*padding: 20px 20px;*/
+		color:white;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		padding: 20px;
+		width: 80%;
+		text-align: center !important;
+		background-color: rgba(0,0,0, 0.6)
+	/*background-color: #85C1E9;
 	padding: 60px;
-	text-align-last:center;
-
+	text-align-last:center;*/
 
 }
 
 li{
-	
 	display: inline-block;
-	color: #FFFFFF;
+	/*color: #FFFFFF;*/
 	list-style: none;
 	font-size: 25px;
 	

@@ -4,6 +4,7 @@
 	<title>Registro de Tratamiento</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="../estaticos/css/estilo.css">
+	<link rel="stylesheet" href="estaticos/css/bootstrap/bootstrap.min.css">
 </head>
 <body>
 	<div class="nav">
@@ -24,6 +25,9 @@
 	</form>
         <?php 
         include("registrar.php");
-        ?>
+		?>
+		    <script src="estaticos/js/bootstrap/jquery.js"></script>
+    		<script src="estaticos/js/bootstrap/bootstrap.min.js"></script>
+    		<script src="/estaticos/js/bootstrap/index.js"></script>
 </body>
 </html>
