@@ -19,7 +19,7 @@ if (isset($_POST["boton1"])) {
 
 		$destino = "../multimedia/" . $imagen;
 		if(move_uploaded_file( $tmp_name, $destino )){
-			chmod('images/'.$archivo, 0777);
+			chmod($destino, 0777);
 		}
 
 	    if ($resultado) {

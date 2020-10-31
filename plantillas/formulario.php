@@ -16,7 +16,7 @@
 		<h1>Registro de Tratamiento</h1>
 		<h5>Los campos marcados con * son obligatorios.</h5>
 		<h3>TITULO DEL TRATAMIENTO *</h3>
-		<input type="text" name="titulo" placeholder="Ingrese el Tratamiento" required="" pattern="[a-zA-Z]">
+        <input type="text" name="titulo" placeholder="Ingrese el Tratamiento"    required="" pattern="\S+[a-zA-Z ]{5,255}">
 		<h3>SUBIR IMAGEN *</h3>
 		<input type="file" name="imagen" accept="image/png,.jpg,.bmp,.jpeg" required>
 		<h3>DESCRIPCION *</h3>
