@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="icon" type="image/ico" href="../estaticos/img/dienteN.ico">
 	<title>Tratamientos</title>
 	<link rel="stylesheet" href="../estaticos/css/bootstrap/bootstrap.min.css">
 	<link rel="stylesheet" href="../estaticos/css/mostrarTratamientos.css">

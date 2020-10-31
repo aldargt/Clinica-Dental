@@ -74,7 +74,7 @@ input[type="submit"]{
 	/*margin-top: 22px;*/
 	border: none;
 }
-input[type="reset"]{
+input[type="button"]{
 	background-color: #0abde3;
 	color: #222f3e;
 	width: 20%;

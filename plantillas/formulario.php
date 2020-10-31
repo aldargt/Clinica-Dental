@@ -3,6 +3,7 @@
 <head>
 	<title>Registro de Tratamiento</title>
 	<meta charset="utf-8">
+	<link rel="icon" type="image/ico" href="../estaticos/img/dienteN.ico">
 	<link rel="stylesheet" type="text/css" href="../estaticos/css/estilo.css">
 	<link rel="stylesheet" href="estaticos/css/bootstrap/bootstrap.min.css">
 </head>
@@ -21,7 +22,10 @@
 		<h3>DESCRIPCION *</h3>
 		<textarea name="descripcion" rows="10" cols="60" placeholder="Ingrese el Tratamiento" required></textarea>
 		<input type="submit" value="Registrar Tratamiento" name="boton1">
-		<input type="reset" value="Cancelar" name="boton2">
+		<input type="button" name="boton2" 
+		onclick='if(confirm("Todos los datos se perderán ¿Desea continuar?")) 
+		location.href="homeAdministrador.html"' 
+		value="Cancelar"/>
 	</form>
         <?php 
         include("registrar.php");
