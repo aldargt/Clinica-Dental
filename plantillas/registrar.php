@@ -24,9 +24,9 @@ if (isset($_POST["boton1"])) {
 		}
 
 		if (pg_query($conex,$consulta)) {
-    		echo "<h3 class='ok'>¡Se ha Registrado correctamente el tratamiento!</h3>";
+    		echo "<script type='text/javascript'>alert('¡Se ha registrado correctamente el Tratamiento!');</script>";
     	} else {
-    		echo "<h3 class='bad'>¡Ups ha ocurrido un error!</h3>";
+    		echo "<script type='text/javascript'>alert('¡Ups ha ocurrido un error!');</script>";
     	}
 	}else{
 		echo "<h3 class='bad'>¡La extension de la imagen es incorrecta!</h3>";
