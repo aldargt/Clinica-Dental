@@ -3,6 +3,7 @@
 	margin: 0;
 	border: 0;
 	font-family: 'Times New Roman', Times, serif;
+	/*box-sizing: border-box;*/
 }
 body{
  margin: 0;
@@ -26,7 +27,7 @@ nav{
 		top: 50%;
 		transform: translate(-50%, -50%);
 		padding: 20px;
-		width: 80%;
+		width: 90%;
 		text-align: center !important;
 		background-color: rgba(0,0,0, 0.6)
 	/*background-color: #85C1E9;
@@ -40,7 +41,7 @@ li{
 	/*color: #FFFFFF;*/
 	list-style: none;
 	font-size: 25px;
-	
+
 }
 a{
 	text-decoration: none;

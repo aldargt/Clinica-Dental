@@ -16,6 +16,7 @@ if (isset($_POST["boton1"])) {
 
 	$consulta    = "INSERT INTO clinicadental_tratamientos(titulo, descripcion, imagen) VALUES ('$titulo', '$descripcion', '$imagen')";
 
+
 	$destino = "../multimedia/" . $imagen;
 	if(strpos($tipo, "png") || strpos($tipo, "jpg") || strpos($tipo, "jpeg") || strpos($tipo, "bmp")){
 		if(move_uploaded_file( $tmp_name, $destino)){
@@ -30,8 +31,6 @@ if (isset($_POST["boton1"])) {
 	}else{
 		echo "<h3 class='bad'>¡La extension de la imagen es incorrecta!</h3>";
 	}
-    
-
 }
 
 ?>

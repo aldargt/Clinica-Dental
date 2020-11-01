@@ -21,7 +21,7 @@ form {
 	top: 60%;
 	transform: translate(-50%, -50%);
 	padding: 20px;
-	width: 80%;
+	width: 70%;
 	text-align: center !important;
 	background-color: rgba(0,0,0, 0.6)
 	
@@ -74,7 +74,7 @@ input[type="submit"]{
 	/*margin-top: 22px;*/
 	border: none;
 }
-input[type="reset"]{
+input[type="button"]{
 	background-color: #0abde3;
 	color: #222f3e;
 	width: 20%;
