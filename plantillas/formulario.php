@@ -9,8 +9,7 @@
 </head>
 <body>
 	<div class="nav">
-		<a href="../index.html">Inicio</a>
-		<a href="homeAdministrador.html">Administrador</a>
+		<a href="../index.html">ClinicaDent</a>
 	</div>
     <form method="post" enctype="multipart/form-data" onsubmit="rellenar()">
 		<h1>Registro de Tratamiento</h1>
