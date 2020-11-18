@@ -2,8 +2,9 @@
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	font-family: 'Times New Roman', Times, serif;
+	font-family: -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, "Helvetica Neue", sans-serif;
 }
+
 body{
 	background-attachment: fixed;
 	background-position: center;
@@ -14,15 +15,12 @@ body{
 
 form {
 	color: white;
-	position: absolute;
-	left: 50%;
-	top: 55%;
-	transform: translate(-50%, -50%);
+	margin: 4rem auto;
 	padding: 20px;
 	width: 70%;
+	min-width: 30rem;
 	text-align: center !important;
-	background-color: rgba(0,0,0, 0.6)
-	
+	background-color: rgba(0,0,0, 0.6);
 }
 
 h1 {
@@ -31,13 +29,8 @@ h1 {
 	padding: 3px;
 	color: white
 }
-h5{
-	text-align: left;
-	padding: 5px;
-	color: white;
-	/*color: #444*/
-}
-h3{
+
+h6, h5, h4, h3{
 	text-align: left;
 	padding: 5px;
 	color: white;
@@ -109,7 +102,22 @@ input[type="button"]{
 	color: rgb(255, 255, 255);
 	display: inline-block;
 	padding: 12px;
-
-
-
 }
+
+.duracionTratamiento {
+	width: calc(100% - 20px);
+	margin: 0 !important;
+}
+
+.duracionTratamiento label{
+	display: inline-block;
+	width: 13%;
+}
+
+.duracionTratamiento select {
+	display: inline-block;
+	width: 35% !important;
+	font-size: 16px;
+	padding: 9px;
+}
+

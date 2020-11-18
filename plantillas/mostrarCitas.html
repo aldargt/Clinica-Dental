@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>mostrarCitas</title>
+  <link rel="stylesheet" type="text/css" href="../estaticos/css/mostrarCitas.css">
+</head>
+<body>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="../index.html">ClinicaDent</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    </button>
+  </nav>
+</header>
+<main class="calendar-contain">
+
+  <aside class="calendar__sidebar">
+    <div class="sidebar__nav">
+      <!-- Icons by Icons8 -->
+      <span class="sidebar__nav-item"><img class="icon icons8-Plus-Math" width="22px" height="22px" src="../estaticos/img/plus.png"></span>
+      <span class="sidebar__nav-item"><img class="icon icons8-Share" width="22px" height="22px" src="../estaticos/img/reload.png"></span>
+      <span class="sidebar__nav-item"><img class="icon icons8-Up" width="22px" height="22px" src="../estaticos/img/up_arrow.png"></span>
+      <span class="sidebar__nav-item"><img class="icon icons8-Down" width="22px" height="22px" src="../estaticos/img/down_arrow.png"></span>
+    </div>
+    <h2 class="sidebar__heading">Miercoles <br>Abril 6</h2>
+    <ul class="sidebar__list">
+      <li class="sidebar__list-item sidebar__list-item--complete"><span class="list-item__time">8.30</span> Team Meeting</li>
+      <li class="sidebar__list-item sidebar__list-item--complete"><span class="list-item__time">10.00</span> Lunch with Sasha</li>
+      <li class="sidebar__list-item"><span class="list-item__time">14.30</span> Design Review</li>
+      <li class="sidebar__list-item"><span class="list-item__time">16.00</span> Get Groceries</li>
+    </ul>
+  </aside>
+
+  <section class="title-bar">
+    <div class="dropdown">
+      <button class="title-bar__burger dropdown-toggle" type="button" id="burger" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="burger__lines">Toggle Menu</span>
+      </button>
+      <div class="dropdown-menu p-2" aria-labelledby="burger">
+        <div class="form-group">
+          <label for="year">A&#241;o</label>
+          <input class="form-control" id="year" placeholder="A&#241;o">
+          <label class="help-year">*años entre 2010 y 2029</label>
+        </div>
+        <button class="btn-year">Buscar</button>
+      </div>
+    </div>
+    <div class="dropdown">
+      <div class="title-bar__year dropdown-toggle" type="button" id="years" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        -
+      </div>
+      <div class="dropdown-menu years" aria-labelledby="years"></div>
+    </div>
+    <span class="title-bar__symbol">></span>
+    <div class="dropdown">
+      <div class="title-bar__month dropdown-toggle" type="button" id="months" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        -
+      </div>
+      <div class="dropdown-menu months" aria-labelledby="months">
+        <div class="dropdown-item" value="0">Enero</div>
+        <div class="dropdown-item" value="1">Febrero</div>
+        <div class="dropdown-item" value="2">Marzo</div>
+        <div class="dropdown-item" value="3">Abril</div>
+        <div class="dropdown-item" value="4">Mayo</div>
+        <div class="dropdown-item" value="5">Junio</div>
+        <div class="dropdown-item" value="6">Julio</div>
+        <div class="dropdown-item" value="7">Agosto</div>
+        <div class="dropdown-item" value="8">Septiembre</div>
+        <div class="dropdown-item" value="9">Octubre</div>
+        <div class="dropdown-item" value="10">Noviembre</div>
+        <div class="dropdown-item" value="11">Diciembre</div>
+      </div>
+    </div>
+    <span class="title-bar__symbol">|</span>
+    <span class="title-bar__today">Hoy</span>
+    <div class="title-bar__controls">
+      -
+    </div>
+  </section>
+
+  <section class="calendar__days">
+    <section class="calendar__top-bar">
+      <span class="top-bar__days">Domingo</span>
+      <span class="top-bar__days">Lunes</span>
+      <span class="top-bar__days">Martes</span>
+      <span class="top-bar__days">Miercoles</span>
+      <span class="top-bar__days">Jueves</span>
+      <span class="top-bar__days">Viernes</span>
+      <span class="top-bar__days">Sabado</span>
+    </section>
+
+    <section class="calendar__week">
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task"></span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task">4</span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task">2</span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task">3</span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task">1</span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task">2</span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task"></span>
+      </div>
+    </section>
+
+    <section class="calendar__week">
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task"></span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task">3</span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task">3</span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task">1</span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task">2</span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task">2</span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task"></span>
+      </div>
+    </section>
+
+    <section class="calendar__week">
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task"></span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task">2</span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task">4</span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task">2</span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task">1</span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task">4</span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task"></span>
+      </div>
+    </section>
+
+    <section class="calendar__week">
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task"></span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task">2</span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task">1</span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task">2</span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task">5</span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task">3</span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task"></span>
+      </div>
+    </section>
+
+    <section class="calendar__week">
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task"></span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task">1</span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task">2</span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task">1</span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task">5</span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task">3</span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task"></span>
+      </div>
+    </section>
+
+    <section class="calendar__week hide">
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task"></span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task">2</span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task">1</span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task">1</span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task">3</span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task">2</span>
+      </div>
+      <div class="calendar__day">
+        <span class="calendar__date"></span>
+        <span class="calendar__task"></span>
+      </div>
+    </section>
+  </section>
+
+</main>
+
+<script src="../estaticos/js/jquery-3.5.1.min.js"></script>
+<script src="../estaticos/js/popper.min.js"></script>
+<script src="../estaticos/js/bootstrap/bootstrap.min.js"></script>
+<script src="../estaticos/js/mostrarCitas.js"></script>
+
+</body>
+</html>
