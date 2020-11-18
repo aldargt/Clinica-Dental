@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reservacion de Cita</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="estiloformres.css">
+</head>
+<body>
+	<div class="nav">
+		<a href="../index.html">ClinicaDent</a>
+	</div>
+<div class="main">
+    <div class="container">
+      <form enctype="multipart/form-data" method="post">
+        <h2>Reserva tu Cita</h2>
+        <h5>Todos los campos son obligatorios.</h5>
+        <label for="nombre">NOMBRE:</label>
+        <input type="text" placeholder="Ingrese Nombre" name="nombre" id="nombre" class="cajas"></br>
+      
+        <label for="apellidos">APELLIDOS:</label>
+        <input type="text" placeholder="Ingrese Apellidos" name="apellidos" id="apellidos" class="cajas"></br>
+  
+        <label for="email">CORREO ELECTRONICO:</label>
+        <input type="email" placeholder="Ingrese Correo Electronico" name="email" id="email" class="cajas">       </br>
+  
+        <label for="telefono">TELEFONO:</label>
+        <input type="text" placeholder="Ingrese Telefono" name="telefono" id="telefono" class="cajas"></br>
+
+        <label for="tipo">TIPO DE TRATAMIENTO:</label>
+       <select id="estadia" class="cajas">
+         <option disabled selected>Seleccione su tipo de Tratamiento</option>
+         <option label="Extraer de BD 1">
+         <option label="Extraer de BD 2">
+         <option label="Extraer de BD 3">
+         <option label="Extraer de BD 4">
+         <option label="Extraer de BD 5">
+         <option label="Extraer de BD 6">
+       </select></br>
+        
+        <label for="fecha">FECHA:</label>
+        <select class="fecha" name="fecha">
+          <option disabled selected>Seleccione una fecha</option>
+        </select></br>
+
+        <label for="fecha">HORA:</label>
+        <select class="cajas" name="hora">
+          <option disabled selected>Seleccione un horario</option>
+            <option label="Inserten horarios 1">
+            <option label="Inserten horarios 2">
+            <option label="Inserten horarios 3">
+            <option label="Inserten horarios 4">
+            <option label="Inserten horarios 5">
+            <option label="Inserten horarios 6">
+			<option label="Inserten horarios 7">
+			<option label="Inserten horarios 8"></option>
+        </select></br>
+
+        <input type="button" name="boton2" onclick='if(confirm("¿Esta seguro que quiere abandonar la pagina de reservas de citas?")) location.href="homeAdministrador.html"'value="Cancelar" class="btn">
+        <input type="submit" value="RESERVAR CITA" name="submit" class="btn">
+  
+  </form>
+  <script src="jquery-3.5.1.min.js"></script>
+		<script type="text/javascript">
+			var arrayMeses = [
+				  "En",
+				  "Febr",
+				  "Mzo",
+				  "Abr",
+				  "My",
+				  "Jun",
+				  "Jul",
+				  "Agt",
+				  "Sept",
+				  "Oct",
+				  "Nov",
+				  "Dic"
+				];
+			
+			function llenarFechas(){
+				var fecha = new Date();
+				var mes       = fecha.getMonth();
+				var dia       = fecha.getDate() + 2;//dos dias despues de hoy
+				var agno      = fecha.getUTCFullYear();
+
+				var contadorFechas = 0; //contador para el numero de dias a cargar
+				var contadorDias = 0; //contador que incrementa la fecha
+				
+					while(contadorFechas < 10){
+						sigtFecha = new Date(agno, mes, dia+contadorDias);
+						diaSemana      = sigtFecha.getDay();
+						if(diaSemana != 0 && diaSemana != 6){
+							//si dia es diferente de 0(domingo) y 6(sabado)
+							sigtDia  = sigtFecha.getDate();
+							sigtMes  = sigtFecha.getMonth();
+							sigtAgno = sigtFecha.getUTCFullYear();
+							valor    = sigtAgno + "-" + sigtMes + "-" + sigtDia
+							$(".fecha").append("<option value='"+valor+"'>"+sigtDia+" "+arrayMeses[sigtMes]+"</option");
+							contadorFechas = contadorFechas + 1;
+						}
+						contadorDias = contadorDias + 1;
+					}
+			}
+
+			$(document).ready(function(){
+				llenarFechas();
+			});
+
+		</script>
+  
+        
+  
+    </div>
+  </div>
+</body>
+</html>
