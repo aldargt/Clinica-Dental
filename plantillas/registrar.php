@@ -13,8 +13,11 @@ if (isset($_POST["boton1"])) {
 	$titulo      = trim($_POST["titulo"]);
 	$imagen      = $name;
 	$descripcion = trim($_POST["descripcion"]);
+	$hora        = $_POST["hora"];
+	$minuto      = $_POST["minuto"];
+	$hora        = $hora + ($minuto/60.0);
 
-	$consulta    = "INSERT INTO clinicadental_tratamientos(titulo, descripcion, imagen) VALUES ('$titulo', '$descripcion', '$imagen')";
+	$consulta    = "INSERT INTO clinicadental_tratamientos(titulo, descripcion, imagen, duracion_tratamiento) VALUES ('$titulo', '$descripcion', '$imagen', '$hora')";
 
 
 	$destino = "../multimedia/" . $imagen;

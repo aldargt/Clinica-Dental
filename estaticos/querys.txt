@@ -1,0 +1,5 @@
+select count(*) from clinicadental_citas where dia_cita=<dia>
+//consulta devuelve el numero de citas del dia especificado
+
+select * from clinicadental_citas where agno_cita=<año> and mes_cita=<numero mes> and dia_cita=<dia>
+//consulta devuelve todas las citas de la fecha
