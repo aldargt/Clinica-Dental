@@ -17,14 +17,14 @@
 
 <div class="main">
     <div class="container">
-      <form enctype="multipart/form-data" method="post">
+      <form enctype="multipart/form-data" method="post" action="registrarCita.php">
         <h2>Reserva tu Cita</h2>
         <h5>Todos los campos son obligatorios.</h5>
         <label for="nombre">NOMBRE:</label>
         <input type="text" placeholder="Ingrese Nombre" name="nombre" required="" pattern="\S+[a-zA-ZñÑ ]{4,255}" id="nombre" class="cajas"></br>
       
         <label for="apellidos">APELLIDOS:</label>
-        <input type="text" placeholder="Ingrese Apellidos" name="apellidos" required="" pattern="\S+[a-zA-ZñÑ ]{4,255}" id="apellidos" class="cajas"></br>
+        <input type="text" placeholder="Ingrese Apellidos" name="apellido" required="" pattern="\S+[a-zA-ZñÑ ]{4,255}" id="apellidos" class="cajas"></br>
   
         <label for="email">CORREO ELECTRONICO:</label>
         <input type="email" placeholder="Ingrese Correo Electronico" required="" name="email" id="email" class="cajas">       </br>
@@ -33,7 +33,7 @@
         <input type="text" placeholder="Ingrese Telefono" name="telefono" required="" pattern="[0-9]+" maxlength="8" id="telefono" class="cajas"></br>
         
         <label for="tipo">TIPO DE TRATAMIENTO:</label>
-       <select id="estadia"  required="" class="cajas">
+        <select id="estadia"  required="" class="cajas" name="tratamiento[]">
           <option disabled selected>Seleccione su tipo de Tratamiento</option>
           <?php 
               include("con_db.php");
@@ -44,7 +44,7 @@
               while($tratamiento = pg_fetch_assoc($resultset)){
             ?>
 
-              <option value="{'duracion':<?php echo $tratamiento['duracion_tratamiento'] ?>, 'titulo':<?php echo $tratamiento['titulo'] ?>}">
+              <option value="<?php echo $tratamiento['duracion_tratamiento'] .'-'. $tratamiento['titulo'] ?>">
                <?php echo $tratamiento["titulo"] ?>
               </option>
 
@@ -54,7 +54,7 @@
        </select></br>
         
         <label for="fecha">FECHA:</label>
-        <select class="fecha"  name="fecha" >
+        <select class="fecha"  name="fecha[]" >
           	<option disabled selected> Seleccione una fecha</option>
         </select></br>
 

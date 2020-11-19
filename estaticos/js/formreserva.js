@@ -34,7 +34,7 @@ function llenarFechas(){
 				sigtDia  = sigtFecha.getDate();
 				sigtMes  = sigtFecha.getMonth();
 				sigtAgno = sigtFecha.getUTCFullYear();
-				$(".fecha").append("<option value=\"{'agno':"+sigtAgno+", 'mes':"+sigtMes+", 'dia':"+sigtDia+"}\">"+sigtDia+" "+arrayMeses[sigtMes]+"</option");
+				$(".fecha").append("<option value="+sigtAgno+"-"+sigtMes+"-"+sigtDia+">"+sigtDia+" "+arrayMeses[sigtMes]+"</option");
 				contadorFechas = contadorFechas + 1;
 			}
 			contadorDias = contadorDias + 1;
