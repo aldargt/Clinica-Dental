@@ -33,7 +33,7 @@
         <input type="text" placeholder="Ingrese Telefono" name="telefono" required="" pattern="[0-9]+" maxlength="8" id="telefono" class="cajas"></br>
         
         <label for="tipo">TIPO DE TRATAMIENTO:</label>
-        <select id="estadia"  required="" class="cajas" name="tratamiento[]">
+        <select id="estadia"  required="" class="cajas" name="tratamiento">
           <option disabled selected>Seleccione su tipo de Tratamiento</option>
           <?php 
               include("con_db.php");
@@ -54,7 +54,7 @@
        </select></br>
         
         <label for="fecha">FECHA:</label>
-        <select class="fecha"  name="fecha[]" >
+        <select class="fecha"  name="fecha" >
           	<option disabled selected> Seleccione una fecha</option>
         </select></br>
 

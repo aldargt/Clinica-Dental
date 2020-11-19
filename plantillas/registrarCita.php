@@ -45,7 +45,7 @@ if (isset($_POST["submit"])) {
         echo "<script type='text/javascript'>alert('¡Se ha registrado correctamente el Tratamiento!');</script>";
         header("Location:../index.html");
     } else {
-        echo "<script type='text/javascript'>alert('¡Se ha registrado correctamente el Tratamiento!');</script>";
+        echo "<script type='text/javascript'>alert('¡Ups ha ocurrido un error!');</script>";
    }
 }
 
