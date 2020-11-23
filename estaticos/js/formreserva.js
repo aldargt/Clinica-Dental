@@ -44,7 +44,8 @@ function llenarFechas(){
 }
 
 function llenarHoras(){
-	
+	$("#hora").empty();
+	$("#hora").append("<option disabled selected>Seleccione un horario</option>");
 	duracion = $("#estadia").val(); //ejemplo -- "1-Estetica dental"
 
 	if(duracion != null){
