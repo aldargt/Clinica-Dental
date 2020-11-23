@@ -54,45 +54,13 @@
        </select></br>
         
         <label for="fecha">FECHA:</label>
-        <select class="fecha"  name="fecha" >
+        <select class="fecha"  name="fecha" id="fecha">
           	<option disabled selected> Seleccione una fecha</option>
         </select></br>
 
-        <label for="fecha">HORA:</label>
-        <select class="cajas"  required=""  name="hora">
+        <label for="hora">HORA:</label>
+        <select class="cajas"  required=""  name="hora" id="hora">
           	<option disabled selected>Seleccione un horario</option>
-            <option value="8.00">08:00</option>
-            <option value="8.25">08:15</option>
-            <option value="8.50">08:30</option>
-            <option value="8.75">08:45</option>
-            <option value="9.00">09:00</option>
-            <option value="9.25">09:15</option>
-            <option value="9.50">09:30</option>
-            <option value="9.75">09:45</option>
-            <option value="10.00">10:00</option>
-            <option value="10.25">10:15</option>
-            <option value="10.50">10:30</option>
-            <option value="10.75">10:45</option>
-            <option value="11.00">11:00</option>
-            <option value="11.25">11:15</option>
-            <option value="11.50">11:30</option>
-            <option value="11.75">11:45</option>
-            <option value="14.00">14:00</option>
-            <option value="14.25">14:15</option>
-            <option value="14.50">14:30</option>
-            <option value="14.75">14:45</option>
-            <option value="15.00">15:00</option>
-            <option value="15.25">15:15</option>
-            <option value="15.50">15:30</option>
-            <option value="15.75">15:45</option>
-            <option value="16.00">16:00</option>
-            <option value="16.25">16:15</option>
-            <option value="16.50">16:30</option>
-            <option value="16.75">16:45</option>
-            <option value="17.00">17:00</option>
-            <option value="17.25">17:15</option>
-            <option value="17.50">17:30</option>
-            <option value="17.75">17:45</option>
         </select></br>
 
         <input type="button" name="boton2" onclick='if(confirm("¿Esta seguro que quiere abandonar la pagina de reservas de citas?")) location.href="homeAdministrador.html"'value="Cancelar" class="btn">

@@ -15,6 +15,8 @@ var arrayMeses = [
 
 $(document).ready(function(){
 	llenarFechas();
+	$("#estadia").change(llenarHoras);
+	$("#fecha").change(llenarHoras);
 });
 			
 function llenarFechas(){
@@ -39,4 +41,72 @@ function llenarFechas(){
 			}
 			contadorDias = contadorDias + 1;
 		}
+}
+
+function llenarHoras(){
+	
+	duracion = $("#estadia").val(); //ejemplo -- "1-Estetica dental"
+
+	if(duracion != null){
+		for(var i=0; i<duracion.length; i++){
+			if(duracion.charAt(i) == "-"){
+				duracion = duracion.substring(0, i);
+				break;
+			}
+		}
+	}else{
+		duracion = 0;		
+	}
+
+
+	fecha = $("#fecha").val(); //ejemplo -- "2020-10-25"
+	anioListo = true;
+	index = 0;
+	anio  = 0;
+	mes   = 0;
+	dia   = 0;//	console.log(fecha);
+
+	if(fecha != null){
+
+		for(var i=0; i<fecha.length; i++){
+
+			if(fecha.charAt(i) == "-"){
+
+				if(anioListo){
+					anio = fecha.substring(0, i);
+					anioListo = false;
+					index = i + 1;
+				}else{
+					mes = fecha.substring(index, i);
+					dia = fecha.substring(i+1, fecha.length);
+					break;
+				}
+			}
+		}		
+	}							
+	//console.log(anio+"-"+mes+"-"+dia);
+
+	$.ajax({
+		url: "/Clinica-Dental/plantillas/ajax/llenarHoras.php",
+		type: "post",
+		dataType: "json",
+		data: {'anio': anio, 'mes': mes, 'dia':dia, 'duracion': duracion},
+		success: function(data){
+				//console.log("hola");
+			if(data){
+
+				//para un array (a, b, c, d)
+				for (var i=0 ; i < data.length; i++) {
+
+					hora = parseInt(data[i]);
+					minuto = parseInt((data [i]-hora)*60);
+					if(minuto == 0){
+						minuto = minuto + "0";
+					}
+					$("#hora").append("<option value="+data[i]+">"+hora+":"+minuto+"</option>");
+				}
+				
+			}
+		}
+	}); 
 }
