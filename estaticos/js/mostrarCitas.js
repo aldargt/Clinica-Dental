@@ -121,14 +121,52 @@ function fillCalendar(thisYear, thisMonth){
   }
 }
 
-function fillCalendarToday(){
-  $(".years .dropdown-item").removeClass("active");
-  $(".months .dropdown-item").removeClass("active");
-  $(".dropdown-item[value='"+month+"']").addClass("active");
-  $(".dropdown-item[value='"+year+"']").addClass("active");
-  yearSelected  = year;
-  monthSelected = month;
-  fillCalendar(yearSelected, monthSelected);
+function fillCalendar(thisYear, thisMonth){
+  var days     = $(".calendar__week .calendar__day .calendar__date");
+  var weeks    = $(".calendar__week");
+  var numCells = 35;
+  var thisDay  = 0;
+
+  var previousThisDay = 1;
+  var weekdayFirstDay = (new Date(thisYear, thisMonth, 1)).getDay();
+  var counter         = -weekdayFirstDay;
+
+  $(".title-bar__month").text(monthText[thisMonth]);
+  $(".title-bar__year").text(thisYear);
+
+  if(weekdayFirstDay > 4){
+    numCells = 42;
+    $(weeks[5]).removeClass("hide");
+  }else{
+    $(weeks[5]).addClass("hide");
+  }
+
+  for (var i=0; i < numCells; i++) {
+
+    $(days[i]).parent().removeClass("inactive");
+    $(days[i]).parent().removeClass("today");
+    $(days[i]).next().removeClass("calendar__task--today");
+
+    counter = counter + 1;
+    thisDay = new Date(thisYear, thisMonth, counter);
+
+    if(previousThisDay > thisDay.getDate() || counter < 1){ 
+      $(days[i]).parent().addClass("inactive"); 
+    }else{ 
+      previousThisDay = thisDay.getDate(); 
+    }
+
+    if (thisDay.getDate() == day && thisDay.getMonth() == month && thisDay.getUTCFullYear() == year){
+      $(days[i]).parent().addClass("today");
+      $(days[i]).next().addClass("calendar__task--today");
+    }
+
+    /*-------Esto llena el calendario con los dias------------------------*/
+    $(days[i]).text(thisDay.getDate());
+    //aqui codigo para el numero de citas por dia
+    //$(days[i]).next().text("texto");
+    /*--------------------------------------------------------------------*/
+  }
 }
 
 function setTime(){
