@@ -17,20 +17,20 @@
 
 <div class="main">
     <div class="container">
-      <form enctype="multipart/form-data" method="post" action="registrarCita.php">
+      <form enctype="multipart/form-data" method="post" action="registrarCita.php" onsubmit="return validar();">
         <h2>Reserva tu Cita</h2>
         <h5>Todos los campos son obligatorios.</h5>
         <label for="nombre">NOMBRE:</label>
-        <input type="text" placeholder="Ingrese Nombre" name="nombre" required="" pattern="\S+[a-zA-ZñÑ ]{4,255}" id="nombre" class="cajas"></br>
+        <input type="text" placeholder="Ingrese Nombre"   maxlength="50"    name="nombre"  id="nombre" class="cajas"></br>
       
         <label for="apellidos">APELLIDOS:</label>
-        <input type="text" placeholder="Ingrese Apellidos" name="apellido" required="" pattern="\S+[a-zA-ZñÑ ]{4,255}" id="apellidos" class="cajas"></br>
+        <input type="text" placeholder="Ingrese Apellidos" name="apellido" maxlength="50"   id="apellidos" class="cajas"></br>
   
         <label for="email">CORREO ELECTRONICO:</label>
-        <input type="email" placeholder="Ingrese Correo Electronico" required="" name="email" id="email" class="cajas">       </br>
+        <input type="text" placeholder="Ingrese Correo Electronico" name="email" id="email" class="cajas">       </br>
   
         <label for="telefono">TELEFONO:</label>
-        <input type="text" placeholder="Ingrese Telefono" name="telefono" required="" pattern="[0-9]+" maxlength="8" id="telefono" class="cajas"></br>
+        <input type="text" placeholder="Ingrese Telefono" name="telefono" maxlength="12" id="telefono" class="cajas"></br>
         
         <label for="tipo">TIPO DE TRATAMIENTO:</label>
         <select id="estadia"  required="" class="cajas" name="tratamiento">
@@ -74,3 +74,47 @@
   </div>
 </body>
 </html>
+
+[12:12, 24/11/2020] Alvaro.informatica: <script>
+   function validar(){
+       var nombre, apellidos, email, telefono;
+       nombre= document.getElementById("nombre").value;
+       apellidos= document.getElementById("apellidos").value;
+       email= document.getElementById("email").value;
+       telefono= document.getElementById("telefono").value;
+       console.log(nombre );
+       if(nombre === "" || apellidos === "" || email === "" || telefono === ""){
+           alert("Todos los campos son Obligatorio");
+       }
+       else if(nombre.length > 48){
+           alert("El campo nombre es muy grande");
+       }
+       else if(apellidos.length > 48){
+           alert("El campo apellido es muy grande");
+       }
+       else if(!isNaN(nombre)){
+           alert("En  campo nombre solo acepta letras");
+       }
+       else if(!isNaN(apellidos)){
+           alert("El campo apellidos solo acepta letras");
+       }
+       else if(isNaN(telefono)){
+           alert("El  campo telfono solo acepta numero");
+       }
+       else if(!validarCorreo(email)){
+           alert("El campo email no es valido");
+       }
+         else if(telefono.length <8 ){
+           alert("El campo telefono es pequeño");
+       }
+   }
+
+    function validarCorreo(correo){
+        if(correo.includes('@')){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+</script>
