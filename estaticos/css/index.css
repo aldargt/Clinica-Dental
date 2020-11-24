@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, "Helvetica Neue", sans-serif;
+}
+
+.ewk_cont_banner{
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/consul.jpg");
+
+}
+
+.ewk_sombra{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    width: 80%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    margin: auto;
+}
+
+.ewk_sombra hr{
+    border-top: 1px solid white;
+}
+
+.ewk_sombra h1{
+    font-size: 7vw;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+
+}
+
+.ewk_cont_banner_link{
+    margin: 15px;
+    position: relative;
+}
+
+.ewk_cont_banner_link a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 1px;
+    margin-bottom: 5px;
+    width: 150px;
+}
+
+.ewk_cont_banner_link a:hover{
+    background-color: white;
+    color: #111;
+}
