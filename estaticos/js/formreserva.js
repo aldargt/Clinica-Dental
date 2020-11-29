@@ -88,7 +88,7 @@ function llenarHoras(){
 	//console.log(anio+"-"+mes+"-"+dia);
 
 	$.ajax({
-		url: "/Clinica-Dental/plantillas/ajax/llenarHoras.php",
+		url: "../plantillas/ajax/llenarHoras.php",
 		type: "post",
 		dataType: "json",
 		data: {'anio': anio, 'mes': mes, 'dia':dia, 'duracion': duracion},

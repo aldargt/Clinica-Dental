@@ -56,7 +56,7 @@ if($duracionTratamiento > 0.0 && $anio > 0){
 
 }else{
     pg_close($conex);
-    $data = jason_encode(array("error"));
+    $data = json_encode(array("error"));
 }
 
 echo $data;

@@ -50,7 +50,7 @@
 	?>
 	</div>
 
-<script src="../estaticos/js/bootstrap/jquery.js"></script>
+<script src="../estaticos/js/jquery-3.5.1.min.js"></script>
 <script src="../estaticos/js/mostrarTratamientos.js"></script>
 
 </body>

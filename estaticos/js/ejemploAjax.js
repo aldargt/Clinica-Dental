@@ -5,7 +5,7 @@ $(document).ready(function(){
 
 function cargar(){
 	$.ajax({
-		url: "/Clinica-Dental/plantillas/ajax/ejemploAjax.php",
+		url: "../plantillas/ajax/ejemploAjax.php",
 		type: "get",
 		dataType: "json",
 		success: function(data){
