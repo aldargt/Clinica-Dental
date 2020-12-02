@@ -48,15 +48,17 @@ if (isset($_POST["submit"])) {
 	$consulta    = "INSERT INTO clinicadental_citas(nombres, apellidos , correo, numero_telefono, tipo_tratamiento, duracion_tratamiento, agno_cita, mes_cita, dia_cita, hora_cita, minuto_cita) VALUES ('$nombre', '$apellido', '$correo', '$telefono', '$tipoTratamiento', '$duracionTratamiento', '$anio', '$mes', '$dia', '$hora', '$minuto')";
 
     /*controlar las variables*/
-    if ($nombre != "" && $apellido != "" && $correo != "" && $hora > 0 && $fecha != "" && $minuto > 0 && $tratamiento != "") {
+    if ($nombre !="" || $apellido !="" || $correo !="" || $telefono !="") {
         if (pg_query($conex,$consulta)) {
             //cambiar el mensaje de el alert con boton de aceptar
-            echo "<script type='text/javascript'>if(confirm('¡Se ha registrado correctamente el Tratamiento!')) 
-        location.href='../index.html'</script>";
-        } 
-    } else {
-        echo "<script type='text/javascript'>if(confirm('¡Ups ha ocurrido un error!')) 
-        location.href='formreserva.php'</script>";  
+            echo "<script type='text/javascript'>alert('¡Su cita se ha registrado correctamente!');</script>";
+            echo "<script>setTimeout(\"location.href = '../';\",1500);</script>";
+            //header("location: homeAdministrador.html");
+            //echo "<script type='text/javascript'>window.location.href = 'https://www.youtube.com'</script>"
+        }
+        else {
+            echo "<script type='text/javascript'>alert('¡Ups ha ocurrido un error!');</script>";
+       }
     }
 }
 

@@ -85,7 +85,7 @@
 
         </div>
         <div class= "btn">
-        <input type="button" name="boton2" onclick='if(confirm("¿Esta seguro que quiere abandonar la pagina de reservas de citas?")) location.href="homeAdministrador.html"'value="CANCELAR" class="ui yellow button">
+        <input type="button" name="boton2" onclick='if(confirm("¿Esta seguro que quiere abandonar la pagina de reservas de citas?")) location.href="../"'value="CANCELAR" class="ui yellow button">
         <input type="submit" value="RESERVAR CITA" name="submit" class="ui yellow button">
         </div>
   
