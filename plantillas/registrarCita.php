@@ -41,12 +41,18 @@ if (isset($_POST["submit"])) {
     $minuto      = intval(($_POST["hora"]-$hora) * 60);
 	$consulta    = "INSERT INTO clinicadental_citas(nombres, apellidos , correo, numero_telefono, tipo_tratamiento, duracion_tratamiento, agno_cita, mes_cita, dia_cita, hora_cita, minuto_cita) VALUES ('$nombre', '$apellido', '$correo', '$telefono', '$tipoTratamiento', '$duracionTratamiento', '$anio', '$mes', '$dia', '$hora', '$minuto')";
 
-    if (pg_query($conex,$consulta)) {
-        echo "<script type='text/javascript'>alert('¡Se ha registrado correctamente el Tratamiento!');</script>";
-        header("Location:../index.html");
+    /*controlar las variables*/
+    if ($nombre != "") {
+        if (pg_query($conex,$consulta)) {
+            //cambiar el mensaje de el alert con boton de aceptar
+            echo "<script type='text/javascript'>alert('¡Se ha registrado correctamente el Tratamiento!');</script>";
+            header("Location:../index.html");
+        } 
     } else {
         echo "<script type='text/javascript'>alert('¡Ups ha ocurrido un error!');</script>";
    }
+
+
 }
 
 	

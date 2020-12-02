@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="../estaticos/css/bootstrap/bootstrap.min.css">
   <script src="../estaticos/js/semantic-ui/semantic.min.js"></script>
   <script src="../estaticos/js/semantic-ui/jquery-ui.min.js"></script>
+  
 </head>
 <body>
 
@@ -32,12 +33,14 @@
         <h5>Todo los campos son obligatorios.</h5>
         <div class="form">
         <label for="nombre">NOMBRES:</label></br>
-        <input type="text" placeholder="Ingrese Nombre"   maxlength="50"    name="nombre"  id="nombre" class="cajas" style='width:80%'></br>
+
+        <input type="text" placeholder="Ingrese Nombre"   maxlength="50"    name="nombre"  id="nombre" class="cajas " style='width:80%' pattern="\S+[a-zA-ZñÑ ]{4,50}" title="Solo letras y longitud 3-50" required>
+      </br>
         <label for="apellidos">APELLIDOS:</label></br>
         <input type="text" placeholder="Ingrese Apellidos" name="apellido" maxlength="50"   id="apellidos" class="cajas" style='width:80%'></br>
   
         <label for="email">CORREO ELECTRONICO:</label></br>
-        <input type="text" placeholder="Ingrese Correo Electronico" name="email" id="email" class="cajas" style='width:80%'>       </br>
+        <input type="text" placeholder="ejemplo@dominio.com" name="email" id="email" class="cajas" style='width:80%'>       </br>
   
         <label for="telefono">TELEFONO:</label></br>
         <input type="text" placeholder="Ingrese Telefono" name="telefono" maxlength="12" id="telefono" class="cajas" style='width:80%'></br>
@@ -88,46 +91,87 @@
 </html>
 
 <!-- [12:12, 24/11/2020] Alvaro.informatica:  -->
+<script src="../estaticos/js/jquery-3.5.1.min.js"></script>
+<script src="../estaticos/js/popper.min.js"></script>
+<script src="../estaticos/js/bootstrap/bootstrap.min.js"></script>
 <script>
-   function validar(){
-       var nombre, apellidos, email, telefono;
-       nombre= document.getElementById("nombre").value;
-       apellidos= document.getElementById("apellidos").value;
-       email= document.getElementById("email").value;
-       telefono= document.getElementById("telefono").value;
-       console.log(nombre );
-       if(nombre === "" || apellidos === "" || email === "" || telefono === ""){
-           alert("Todos los campos son Obligatorio");
-       }
-       else if(nombre.length > 48){
-           alert("El campo nombre es muy grande");
-       }
-       else if(apellidos.length > 48){
-           alert("El campo apellido es muy grande");
-       }
-       else if(!isNaN(nombre)){
-           alert("En  campo nombre solo acepta letras");
-       }
-       else if(!isNaN(apellidos)){
-           alert("El campo apellidos solo acepta letras");
-       }
-       else if(isNaN(telefono)){
-           alert("El  campo telfono solo acepta numero");
-       }
-       else if(!validarCorreo(email)){
-           alert("El campo email no es valido");
-       }
-         else if(telefono.length <8 ){
-           alert("El campo telefono es pequeño");
-       }
-   }
+  $(document).ready(function(){
 
-    function validarCorreo(correo){
-        if(correo.includes('@')){
-            return true;
-        }else{
-            return false;
+    $("#info").click(function(){
+      $("#info").popover("show");
+    });
+
+    /*$("#nombre").change(function(){
+      $('#nombre').popover('hide');
+      valor=$("#nombre").val();
+      if(valor.length < 4){
+        $("#nombre").addClass("is-invalid");
+        $("#nombre").removeClass("is-valid");
+        $("#nombre").popover("show");
+        $(".popover-body").text("nombre muy corto");
+      }else if(valor.length > 50){
+
+      }else{
+          $("#nombre").removeClass("is-invalid");
+          $("#nombre").addClass("is-valid");
+        for (var i=valor.length; i >=0; i--) {
+          if( Number.isInteger(parseInt(valor.charAt(i))) ){
+            $("#nombre").addClass("is-invalid");
+            $("#nombre").removeClass("is-valid");
+            $("#nombre").popover("show");
+            $(".popover-body").text("solo letras");
+            break;
+          }else{
+            $("#nombre").removeClass("is-invalid");
+            $("#nombre").addClass("is-valid");
+            break;
+          }
         }
-    }
+      }
+      
+    });*/
+
+  });
+
+   // function validar(){
+   //     var nombre, apellidos, email, telefono;
+   //     nombre= document.getElementById("nombre").value;
+   //     apellidos= document.getElementById("apellidos").value;
+   //     email= document.getElementById("email").value;
+   //     telefono= document.getElementById("telefono").value;
+   //     console.log(nombre );
+   //     if(nombre === "" || apellidos === "" || email === "" || telefono === ""){
+   //         alert("Todos los campos son Obligatorio");
+   //     }
+   //     else if(nombre.length > 48){
+   //         alert("El campo nombre es muy grande");
+   //     }
+   //     else if(apellidos.length > 48){
+   //         alert("El campo apellido es muy grande");
+   //     }
+   //     else if(!isNaN(nombre)){
+   //         alert("En  campo nombre solo acepta letras");
+   //     }
+   //     else if(!isNaN(apellidos)){
+   //         alert("El campo apellidos solo acepta letras");
+   //     }
+   //     else if(isNaN(telefono)){
+   //         alert("El  campo telfono solo acepta numero");
+   //     }
+   //     else if(!validarCorreo(email)){
+   //         alert("El campo email no es valido");
+   //     }
+   //       else if(telefono.length <8 ){
+   //         alert("El campo telefono es pequeño");
+   //     }
+   // }
+
+   //  function validarCorreo(correo){
+   //      if(correo.includes('@')){
+   //          return true;
+   //      }else{
+   //          return false;
+   //      }
+   //  }
 
 </script>
