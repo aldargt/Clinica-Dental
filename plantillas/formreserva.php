@@ -34,20 +34,27 @@
         <div class="form">
         <label for="nombre">NOMBRES:</label></br>
 
-        <input type="text" placeholder="Ingrese Nombre"   maxlength="50"    name="nombre"  id="nombre" class="cajas " style='width:80%' pattern="\S+[a-zA-ZñÑ ]{4,50}" title="Solo letras y longitud 3-50" required>
+        <input type="text" placeholder="Ingrese Nombre" name="nombre" maxlength="50" id="nombre" class="cajas " style='width:80%' pattern="\S+[a-zA-ZñÑ ]{2,49}" title="Solo letras y longitud 3-50" required>
       </br>
         <label for="apellidos">APELLIDOS:</label></br>
-        <input type="text" placeholder="Ingrese Apellidos" name="apellido" maxlength="50"   id="apellidos" class="cajas" style='width:80%'></br>
+        <input type="text" placeholder="Ingrese Apellidos" name="apellido"  id="apellidos" class="cajas" style='width:80%' maxlength="50" 
+        pattern="\S+[a-zA-ZñÑ ]{2,49}" title="Solo letras y longitud 3-50" required>
+      </br>
   
         <label for="email">CORREO ELECTRONICO:</label></br>
-        <input type="text" placeholder="ejemplo@dominio.com" name="email" id="email" class="cajas" style='width:80%'>       </br>
+        <input type="text" placeholder="ejemplo@dominio.com" name="email" id="email" class="cajas" style='width:80%' 
+         title=" Ejemplo@dominio.com" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" required>    
+           </br>
   
         <label for="telefono">TELEFONO:</label></br>
-        <input type="text" placeholder="Ingrese Telefono" name="telefono" maxlength="12" id="telefono" class="cajas" style='width:80%'></br>
+        <input type="text" placeholder="Ingrese Telefono" name="telefono" id="telefono" class="cajas" style='width:80%'
+           title=" solo numeros y longitud 7-8 " pattern="[0-9]{7,8}" required>>
+
+      </br>
         
         <label for="tipo">TIPO DE TRATAMIENTO:</label></br>
-        <select id="estadia"  required="" class="cajas" name="tratamiento" style='width:80%'>
-          <option disabled selected>Seleccione su tipo de Tratamiento</option>
+        <select id="estadia"  class="cajas" name="tratamiento"  style='width:80%' required>
+          <option value="" disabled selected> seleccione tratamiento</option>
           <?php 
               include("con_db.php");
 
@@ -67,14 +74,15 @@
        </select></br>
         
         <label for="fecha">FECHA:</label></br>
-        <select class="fecha"  name="fecha" id="fecha" style='width:80%'>
-          	<option disabled selected> Seleccione una fecha</option>
+        <select class="fecha"  name="fecha" id="fecha" style='width:80%' required>
+          	<option value="" disabled selected> Seleccione una fecha</option>
         </select></br>
 
         <label for="hora">HORA:</label></br>
-        <select class="cajas"  required=""  name="hora" id="hora" style='width:80%'>
-          	<option disabled selected>Seleccione un horario</option>
+        <select class="cajas"  name="hora" id="hora"  style='width:80%' required>
+          	<option value="" disabled selected>Seleccione un horario</option>
         </select></br>
+
         </div>
         <div class= "btn">
         <input type="button" name="boton2" onclick='if(confirm("¿Esta seguro que quiere abandonar la pagina de reservas de citas?")) location.href="homeAdministrador.html"'value="CANCELAR" class="ui yellow button">
