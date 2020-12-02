@@ -240,8 +240,8 @@ function getAppointments(thisDate){
 }
 
 function showInfo(){
+  $(".popover-body").empty();
   var id = $(this).attr("value");
-  $(".popover-body").remove();
   $(".popover-body").append("<div class='text-center'><div class='spinner-border' role='status'><span class='sr-only'>Loading...</span></div></div>");
   $.ajax({
     url: "../plantillas/ajax/informacionCita.php",

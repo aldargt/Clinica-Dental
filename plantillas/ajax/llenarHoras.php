@@ -14,7 +14,7 @@ $duracionTratamiento = 1 - 0.25;*/
 
 $primeraHora = 8;
 
-if($duracionTratamiento > 0.0 && $anio > 0){
+if($anio > 0){
 
     $query = "select hora_cita, minuto_cita, duracion_tratamiento from clinicadental_citas
                 where agno_cita=$anio and mes_cita=$mes and dia_cita=$dia order by hora_cita, minuto_cita";
@@ -43,7 +43,7 @@ if($duracionTratamiento > 0.0 && $anio > 0){
         
     }
     while($primeraHora < (18.00 - $duracionTratamiento)){
-        if($primeraHora != 12.00){
+        if($primeraHora != (12.00 - $duracionTratamiento)){
             $horas[] = $primeraHora;
             $primeraHora = $primeraHora + 0.25;
         }else{
