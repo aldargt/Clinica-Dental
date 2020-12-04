@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 	<title>Reservacion de Cita</title>
 	<meta charset="utf-8">
@@ -47,7 +47,7 @@
            </br>
   
         <label for="telefono">TELEFONO:</label></br>
-        <input type="text" placeholder="Ingrese Telefono" name="telefono" id="telefono" class="cajas" style='width:80%'
+        <input type="text" placeholder="Ingrese Telefono" name="telefono" id="telefono" class="cajas" style='width:80%' maxlength="8" 
            title=" solo numeros y longitud 7-8 " pattern="[0-9]{7,8}" required>>
 
       </br>
