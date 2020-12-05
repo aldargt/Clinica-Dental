@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 	<title>Registro de Tratamiento</title>
 	<meta charset="utf-8">
@@ -17,7 +17,7 @@
   </nav>
 </header>
 
-    <form method="post" enctype="multipart/form-data" onsubmit="rellenar()">
+    <form method="post" enctype="multipart/form-data">
 		<h1>Registro de Tratamiento</h1>
 		<h6>Los campos marcados con * son obligatorios.</h6>
 		<h4>TITULO DEL TRATAMIENTO *</h4>
@@ -36,7 +36,6 @@
 			</select> 
 			<label>Minutos: </label>
 			<select name="minuto">
-				<option value="0">0</option>
 				<option value="15">15</option>
 				<option value="30">30</option>
 				<option value="45">45</option>
@@ -54,10 +53,9 @@
         include("registrar.php");
 	?>
 
-	<script src="../estaticos/js/bootstrap/jquery.js"></script>
+	<script src="../estaticos/js/jquery-3.5.1.min.js"></script>
 	<script src="../estaticos/js/formulario.js"></script>
-    <script src="../estaticos/js/bootstrap/bootstrap.min.js"></script>
-    <script src="../estaticos/js/bootstrap/index.js"></script>
+  <script src="../estaticos/js/bootstrap/bootstrap.min.js"></script>
 
 </body>
 </html>

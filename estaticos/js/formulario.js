@@ -20,7 +20,20 @@ $(document).ready(function(){
 		if(!((tipo == ".png") || (tipo == ".jpg") || (tipo == ".jpeg") || (tipo == ".bmp"))){
 			$("form").after("<h3 class='bad'>¡La extension de la imagen es incorrecta!</h3>");
 		}
-		
 
 	});
+
+	$("[name='hora']").change(function(){
+		if ( parseInt($("[name='hora']").val()) > 0 ) {
+			if ( $("[name='minuto'] [value='0']").length <= 0) {
+				$("[name='minuto']").prepend("<option value='0'>0</option>");
+				$("[name='minuto'] [value='0']").attr("selected", "");
+			}
+		}else{
+			if ($("[name='minuto'] [value='0']").length > 0) {
+				$("[name='minuto'] [value='0']").remove();
+			}
+		}
+	});
+
 });

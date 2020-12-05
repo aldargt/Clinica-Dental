@@ -221,6 +221,9 @@ function getAppointments(thisDate){
       if(data){
         if(data[0] != "error"){
           for (var i=0; i<data.length; i++) {
+            if( data[i]["hora"] < 7 ){
+              continue;
+            }
             minuto = data[i]["minuto"];
             if(minuto == 0){ minuto = "00" }
             hora = data[i]["hora"]+":"+minuto;

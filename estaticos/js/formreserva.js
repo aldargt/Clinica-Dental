@@ -45,7 +45,7 @@ function llenarFechas(){
 
 function llenarHoras(){
 	$("#hora").empty();
-	$("#hora").append("<option disabled selected>Seleccione un horario</option>");
+	$("#hora").append("<option value='' disabled selected>Seleccione un horario</option>");
 	duracion = $("#estadia").val(); //ejemplo -- "1-Estetica dental"
 
 	if(duracion != null){
@@ -65,7 +65,7 @@ function llenarHoras(){
 	index = 0;
 	anio  = 0;
 	mes   = 0;
-	dia   = 0;//	console.log(fecha);
+	dia   = 0;
 
 	if(fecha != null){
 
@@ -84,8 +84,7 @@ function llenarHoras(){
 				}
 			}
 		}		
-	}							
-	//console.log(anio+"-"+mes+"-"+dia);
+	}
 
 	$.ajax({
 		url: "../plantillas/ajax/llenarHoras.php",
@@ -93,21 +92,23 @@ function llenarHoras(){
 		dataType: "json",
 		data: {'anio': anio, 'mes': mes, 'dia':dia, 'duracion': duracion},
 		success: function(data){
-				//console.log("hola");
 			if(data){
 
-				//para un array (a, b, c, d)
-				for (var i=0 ; i < data.length; i++) {
+				if (data.length > 0) {
+					for (var i=0 ; i < data.length; i++) {
 
-					hora = parseInt(data[i]);
-					minuto = parseInt((data [i]-hora)*60);
-					if(minuto == 0){
-						minuto = minuto + "0";
+						hora = parseInt(data[i]);
+						minuto = parseInt((data [i]-hora)*60);
+						if(minuto == 0){
+							minuto = minuto + "0";
+						}
+						$("#hora").append("<option value="+data[i]+">"+hora+":"+minuto+"</option>");
 					}
-					$("#hora").append("<option value="+data[i]+">"+hora+":"+minuto+"</option>");
+				}else{
+					$("#hora").append("<option value='' disabled>Horarios no disponibles</option>");
 				}
-				
 			}
 		}
+
 	}); 
 }
