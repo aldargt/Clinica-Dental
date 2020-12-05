@@ -49,15 +49,21 @@ if (isset($_POST["submit"])) {
 
     /*controlar las variables*/
     if ($nombre !="" || $apellido !="" || $correo !="" || $telefono !="") {
-        if (pg_query($conex,$consulta)) {
+        if($telefono >=1111111 && $hora>=8){
+          if (pg_query($conex,$consulta)) {
             //cambiar el mensaje de el alert con boton de aceptar
             echo "<script type='text/javascript'>alert('¡Su cita se ha registrado correctamente!');</script>";
             echo "<script>setTimeout(\"location.href = '../';\",1500);</script>";
             //header("location: homeAdministrador.html");
             //echo "<script type='text/javascript'>window.location.href = 'https://www.youtube.com'</script>"
+          }else{
+            echo "<script type='text/javascript'>alert('¡Ups ha ocurrido un error!');</script>";
+            echo "<script>setTimeout(\"location.href = '../plantillas/formreserva.php';\",1500);</script>";
+          }
         }
         else {
-            echo "<script type='text/javascript'>alert('¡Ups ha ocurrido un error!');</script>";
+            echo "<script type='text/javascript'>alert('¡Ups ha ocurrido un error, uno o mas de los campos no han sido llenados correctamente! Por favor llene nuevamente el formaulario para reservar una cita.');</script>";
+            echo "<script>setTimeout(\"location.href = '../plantillas/formreserva.php';\",1500);</script>";
        }
     }
 }
