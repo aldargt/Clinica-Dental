@@ -290,7 +290,7 @@ a {
   text-decoration: none;
   background-color: transparent;
 }*/
-*{
+/*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -339,5 +339,56 @@ body{
   margin: 50px;
   position: relative;
   text-align: justify;
-  /*padding: 5px;*/
+  /*padding: 5px;
+}*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.cont{
+  height: 100vh;
+  background-attachment: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img/clinicadental.jpg");
+}
+.sombra{
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  width: 80%;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  margin: auto;
+  /*font-size: 2vw;*/
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 14px;
+}
+.sombra hr{
+  border-top: 1px solid white;
+}
+.sombra h1{
+  font-size: 40px;
+	font-family: 'Times New Roman', Times, serif;
+	text-align: center;
+  /*font-size: 4vw;*/
+}
+.sombra h3{
+  text-align: left;
+  font-size: 15px;
+  
+}
+.cont_for{
+  margin: 15px;
+  position: relative;
+}
+.btn{
+  width: 100%;
 }

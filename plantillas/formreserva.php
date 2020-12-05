@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Reservacion de Cita</title>
-	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="../estaticos/css/formreserva.css">
   <link rel="stylesheet" href="../estaticos/css/semantic-ui/semantic.min.css">
   <link rel="stylesheet" href="../estaticos/css/bootstrap/bootstrap.min.css">
@@ -25,36 +27,30 @@
   </nav> -->
 </header>
 
-<div class="main">
+<section>
+<div class="cont">
 <!-- <div class="ui centered pheader full" style="background-color:white"> -->
-    <div class="container">
+    <div class="sombra">
       <form enctype="multipart/form-data" method="post" action="registrarCita.php" onsubmit="return validar();">
-        <h2>RESERVA TU CITA</h2>
-        <h5>Todo los campos son obligatorios.</h5>
-        <div class="form">
+        <h1>RESERVA TU CITA</h1>
+        <h3>Todo los campos son obligatorios.</h3>
+        <div class="cont_form">
         <label for="nombre">NOMBRES:</label></br>
-
-        <input type="text" placeholder="Ingrese Nombre" name="nombre" maxlength="50" id="nombre" class="cajas " style='width:80%' pattern="\S+[a-zA-ZñÑ ]{2,49}" title="Solo letras y longitud 3-50" required>
-      </br>
+        <input type="text" placeholder="Ingrese Nombre" name="nombre" maxlength="50" id="nombre" class="cajas " style='width:100%' pattern="[a-zA-ZñÑ ]{2,49}" title="Solo letras y longitud 3-50" required>
         <label for="apellidos">APELLIDOS:</label></br>
-        <input type="text" placeholder="Ingrese Apellidos" name="apellido"  id="apellidos" class="cajas" style='width:80%' maxlength="50" 
-        pattern="\S+[a-zA-ZñÑ ]{2,49}" title="Solo letras y longitud 3-50" required>
-      </br>
-  
+        <input type="text" placeholder="Ingrese Apellidos" name="apellido"  id="apellidos" class="cajas" style='width:100%' maxlength="50" 
+        pattern="[a-zA-ZñÑ ]{2,49}" title="Solo letras y longitud 3-50" required>
         <label for="email">CORREO ELECTRONICO:</label></br>
-        <input type="text" placeholder="ejemplo@dominio.com" name="email" id="email" class="cajas" style='width:80%' 
-         title=" Ejemplo@dominio.com" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" required>    
-           </br>
+        <input type="text" placeholder="ejemplo@dominio.com" name="email" id="email" class="cajas" style='width:100%' 
+         title=" Ejemplo@dominio.com" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" required>
   
         <label for="telefono">TELEFONO:</label></br>
-        <input type="text" placeholder="Ingrese Telefono" name="telefono" id="telefono" class="cajas" style='width:80%' maxlength="8" 
-           title=" solo numeros y longitud 7-8 " pattern="[0-9]{7,8}" required>>
-
-      </br>
+        <input type="text" placeholder="Ingrese Telefono" name="telefono" id="telefono" class="cajas" style='width:100%' maxlength="8" 
+           title=" solo numeros y longitud 7-8 " pattern="[0-9]{7,8}" required>
         
         <label for="tipo">TIPO DE TRATAMIENTO:</label></br>
-        <select id="estadia"  class="cajas" name="tratamiento"  style='width:80%' required>
-          <option value="" disabled selected> seleccione tratamiento</option>
+        <select id="estadia"  class="cajas" name="tratamiento" style='width:100%' required>
+          <option value="" disabled selected>Seleccione tratamiento</option>
           <?php 
               include("con_db.php");
 
@@ -74,12 +70,12 @@
        </select></br>
         
         <label for="fecha">FECHA:</label></br>
-        <select class="fecha"  name="fecha" id="fecha" style='width:80%' required>
-          	<option value="" disabled selected> Seleccione una fecha</option>
+        <select class="fecha"  name="fecha" id="fecha" style='width:100%' required>
+          	<option value="" disabled selected>Seleccione una fecha</option>
         </select></br>
 
         <label for="hora">HORA:</label></br>
-        <select class="cajas"  name="hora" id="hora"  style='width:80%' required>
+        <select class="cajas"  name="hora" id="hora"  style='width:100%' required>
           	<option value="" disabled selected>Seleccione un horario</option>
         </select></br>
 
@@ -90,6 +86,7 @@
         </div>
   
   	</form>
+    </section>
   	<script src="../estaticos/js/jquery-3.5.1.min.js"></script>
 	<script src="../estaticos/js/formreserva.js"></script>   
   
