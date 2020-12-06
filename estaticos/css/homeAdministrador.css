@@ -40,16 +40,19 @@
 }
 .contenedor_nav{
 	margin: 15px;
-	position: relative;
+	position: relative;	
 }
 .contenedor_nav a{
-	display: inline-block;
+	/*display: inline-block;*/
 	color: white;
 	text-decoration: none;
 	border: 1px solid white;
 	padding: 1px;
 	margin-bottom: 5px;
-	width: 150px;
+	margin: 30px;
+	width: 200px;
+	height: 50px;
+	padding: 10px;
 }
 .contenedor_nav a:hover{
 	background-color: white;
