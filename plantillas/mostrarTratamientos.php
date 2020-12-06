@@ -25,14 +25,14 @@
 		$contador= 1 ;
 
 		while($tratamiento = pg_fetch_assoc($resultset)){
-			if ($contador%2 == 1){
+			if (($contador-1)%3 == 0){
 				echo "<div class='card-deck'>";
 			}
 	?>
   	    <div class="card">
 		   	<img onerror="this.src='../estaticos/img/default.jpg';" src='../multimedia/<?php echo $tratamiento["imagen"] ?>' class="card-img-top" alt="...">
             <div class="card-body">
-       			<h2 class="card-title">
+       			<h2 clas(s="card-title">
 					<?php echo $tratamiento["titulo"] ?>
 				</h2>
         	    <p class="card-text">
@@ -42,7 +42,7 @@
     	</div>
   				
 	<?php
-			if($contador% 2 ==0){
+			if($contador% 3 ==0){
 			echo "</div>";
 			}	
 			$contador = $contador + 1;

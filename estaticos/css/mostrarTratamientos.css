@@ -32,6 +32,11 @@ h2 {
   font-size: 1.5rem;
   text-align: justify;
 }
+.card-body{
+  height:500px;
+  overflow:hidden; 
+
+}
 
 .card{
   background-color: rgba(255, 255, 255, 0.8);
@@ -58,23 +63,19 @@ h2 {
 
   .card-text{
     font-size: 2rem;
-    height: 20rem;
-    overflow: hidden;
   }
-
-  .zoom .card-text{
-    height: auto;
+  
   }
-
-}
-
 .zoom img{
   height: auto !important;
 }
 
 img{
-  height: 500px !important;
+  height: 15rem !important;
 }
+.zoom .card-body{
+  height: auto !important;
+  }
 
 /*----------------------------Bootstrap--------------------------------*/
 .navbar {
