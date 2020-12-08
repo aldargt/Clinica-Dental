@@ -352,16 +352,16 @@ body{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("../img/clinicadental.jpg");
+  background-image: url("../img/clinica-dental-ivan-fernandez.s1.jpg");
 }
 .sombra{
   position: absolute;
   left: 50%;
-  top: 55%;
+  top: 57%;
   -ms-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  padding: 20px;
+  padding: 10px;
   width: 80%;
   text-align: left;
   background-color: rgba(0, 0, 0, 0.6);
@@ -375,20 +375,23 @@ body{
   border-top: 1px solid white;
 }
 .sombra h1{
-  font-size: 40px;
+  font-size: 57px;
 	font-family: 'Times New Roman', Times, serif;
 	text-align: center;
   /*font-size: 4vw;*/
 }
 .sombra h3{
   text-align: left;
-  font-size: 15px;
-  
+  font-size: 14px;
 }
-.cont_for{
-  margin: 15px;
+.cont_form{
+  margin: 1px; /*centrar*/
   position: relative;
 }
 .btn{
+  /*margin-inline-end: auto;*/
+  /*padding-bottom: 100px;*/
+  /*display: inline;*/
+  /*margin-bottom: 10px;*/
   width: 100%;
 }

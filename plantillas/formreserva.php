@@ -33,7 +33,7 @@
 <!-- <div class="ui centered pheader full" style="background-color:white"> -->
     <div class="sombra">
       <form enctype="multipart/form-data" method="post" action="registrarCita.php" onsubmit="return validar();">
-        <h1>RESERVA TU CITA</h1>
+        <h1>Reserva Tu Cita</h1><hr>
         <h3>Todo los campos son obligatorios.</h3>
         <div class="cont_form">
         <label for="nombre">NOMBRES:</label></br>
@@ -82,8 +82,8 @@
 
         </div>
         <div class= "btn">
-        <input type="button" name="boton2" onclick='if(confirm("¿Esta seguro que quiere abandonar la pagina de reservas de citas?")) location.href="../"'value="CANCELAR" class="ui yellow button">
-        <input type="submit" value="RESERVAR CITA" name="submit" class="ui yellow button">
+        <input type="button" name="boton2" onclick='if(confirm("¿Esta seguro que quiere abandonar la pagina de reservas de citas?")) location.href="../"'value="CANCELAR" class="ui black button">
+        <input type="submit" value="RESERVAR CITA" name="submit" class="ui black button">
         </div>
   
   	</form>
