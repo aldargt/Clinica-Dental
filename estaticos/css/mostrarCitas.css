@@ -358,6 +358,10 @@ p, span, ul, li {
   display: none;
 }
 
+nav{ 
+  background-color: rgba(13, 153, 141, 0.6) !important;
+}
+
 /*----------------------------Bootstrap--------------------------------*/
 .navbar {
   position: relative;

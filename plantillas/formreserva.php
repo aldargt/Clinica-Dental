@@ -87,6 +87,17 @@
   
     </div>
   </div>
+
+<?php
+if(isset($_GET["register"])){
+  if ($_GET["register"] == "succesful") {
+    echo "<script type='text/javascript'>$(document).ready(function(){alert('¡Su cita se ha registrado correctamente!');setTimeout(\"location.href = '../';\",1500);});</script>";
+  }else if($_GET["register"] == "failed"){
+    echo "<script type='text/javascript'>$(document).ready(function(){alert('¡Ups ha ocurrido un error, uno o mas de los campos no han sido llenados correctamente! Por favor llene nuevamente el formaulario para reservar una cita.');});</script>";
+  }
+}
+?>
+
 </body>
 </html>
 
