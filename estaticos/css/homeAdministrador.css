@@ -4,6 +4,7 @@
 	border: 0;
 	/*font-family: 'Times New Roman', Times, serif;*/
 	box-sizing: border-box;
+
 }
 .contenedor{
  /*margin: auto;
@@ -13,8 +14,8 @@
  background-position: center;
  background-repeat: no-repeat;
  background-size: cover;
- background:url("../img/admin.jpeg");
- color: white;
+ 
+ color: black;
  margin: auto;
 }
 
@@ -26,7 +27,7 @@
 		padding: 20px;
 		width: 80%;
 		text-align: center !important;
-		background-color: rgba(0,0,0, 0.6)
+		background-color: rgba(13, 153, 141, 0.6)
 }
 
 .sombra hr{
@@ -56,9 +57,13 @@
 	height: 50px;
 	justify-content: center;
 	align-items: center;
+	background-color: rgb(16, 134, 134);
 }
 .contenedor_nav a:hover{
 	background-color: white;
-	color: #111;
+	color: black;
 }
+nav{
 
+	background-color: rgba(13, 153, 141, 0.6);
+}
