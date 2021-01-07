@@ -11,8 +11,12 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url("../img/consul.jpg");
+    background-image: url("../img/NC_DENTALCANGAS_13.jpg");
 
+}
+
+.bg-light {
+    background-color: rgba(13, 153, 141, 0.6) !important;
 }
 
 .ewk_sombra{
@@ -23,7 +27,7 @@
     padding: 20px;
     width: 80%;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(13, 153, 141, 0.6);
     color: white;
     margin: auto;
 }
@@ -48,13 +52,22 @@
     display: inline-block;
     color: white;
     text-decoration: none;
-    border: 1px solid white;
+    /*border: 1px solid white;*/
+    background-color: rgb(16, 134, 134) !important;
     padding: 1px;
     margin-bottom: 5px;
     width: 150px;
 }
+/*input[type="submit"]{
+    background-color: rgb(16, 134, 134) !important;
+    border: 1px solid;
+    margin-bottom: 5px;
+  }
+  input[type="button"]{
+    background-color: rgb(16, 134, 134) !important;
+  }*/
 
-.ewk_cont_banner_link a:hover{
+/*.ewk_cont_banner_link a:hover{
     background-color: white;
     color: #111;
-}
+}*/

@@ -369,7 +369,7 @@ body{
   width: 80%;
   text-align: left;
   background-color: rgba(13, 153, 141, 0.6);
-  color: white;
+  color: black;
   margin: auto;
   /*font-size: 2vw;*/
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -377,10 +377,11 @@ body{
 }
 .sombra hr{
   border-top: 1px solid white;
-  background-color: rgba(13, 153, 141, 0.6);
+  background-color: rgba(13, 153, 141, 0.9);
 }
 .sombra h1{
-  font-size: 57px;
+  font-size: 5vw;
+  /*font-size: 57px;*/
 	font-family: 'Times New Roman', Times, serif;
   text-align: center;
 
