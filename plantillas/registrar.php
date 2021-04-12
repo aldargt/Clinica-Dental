@@ -3,27 +3,37 @@
 include("con_db.php");
 
 if (isset($_POST["boton1"])) {
-    if (strlen($_POST["titulo"]) >= 1 && strlen($_POST["descripcion"]) >= 1) {
-		$titulo = trim($_POST["titulo"]);
-		$imagen = trim($_POST["imagen"]);
-		$descripcion = trim($_POST["descripcion"]);
-	    $fechareg = date("d/m/y");
-		$consulta = "INSERT INTO tratamientos(tratamiento, imagen, descripcion, fecha_reg) VALUES ('$titulo','$imagen','$descripcion','$fechareg')";
-		$resultado = mysqli_query($conex,$consulta);
-	    if ($resultado) {
-	    	?> 
-	    	<h3 class="ok">¡Se ha Registrado correctamente el tratamiento!</h3>
-           <?php
-	    } else {
-	    	?> 
-	    	<h3 class="bad">¡Ups ha ocurrido un error!</h3>
-           <?php
-	    }
-    }   else {
-	    	?> 
-	    	<h3 class="bad">¡Error, En el Campo no Llenado!</h3>
-           <?php
-    }
+
+	if(isset($_FILES["imagen"])){
+		$name = $_FILES["imagen"]["name"];
+		$tmp_name = $_FILES["imagen"]["tmp_name"];
+		$tipo = $_FILES['imagen']['type'];
+	}
+
+	$titulo      = trim($_POST["titulo"]);
+	$imagen      = $name;
+	$descripcion = trim($_POST["descripcion"]);
+	$hora        = $_POST["hora"];
+	$minuto      = $_POST["minuto"];
+	$hora        = $hora + ($minuto/60.0);
+
+	$consulta    = "INSERT INTO clinicadental_tratamientos(titulo, descripcion, imagen, duracion_tratamiento) VALUES ('$titulo', '$descripcion', '$imagen', '$hora')";
+
+
+	$destino = "../multimedia/" . $imagen;
+	if(strpos($tipo, "png") || strpos($tipo, "jpg") || strpos($tipo, "jpeg") || strpos($tipo, "bmp")){
+		if(move_uploaded_file( $tmp_name, $destino)){
+			chmod($destino, 0777);
+		}
+
+		if (pg_query($conex,$consulta)) {
+    		echo "<script type='text/javascript'>alert('¡Se ha registrado correctamente el Tratamiento!');</script>";
+    	} else {
+    		echo "<script type='text/javascript'>alert('¡Ups ha ocurrido un error!');</script>";
+    	}
+	}else{
+		echo "<h3 class='bad'>¡La extension de la imagen es incorrecta!</h3>";
+	}
 }
 
 ?>
